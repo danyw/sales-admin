@@ -180,6 +180,14 @@ export const themeSettings = (mode) => {
         fontFamily: ['Open Sans', 'sans-serif'].join(','),
         fontSize: 20,
       },
+      h5: {
+        fontFamily: ['Open Sans', 'sans-serif'].join(','),
+        fontSize: 16,
+      },
+      h6: {
+        fontFamily: ['Open Sans', 'sans-serif'].join(','),
+        fontSize: 14,
+      },
     },
   };
 };
