@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ProSidebar, Menu, MenuItem } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
-import { tokens } from '../config/theme';
+import { tokens, themeSettings } from '../config/theme';
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
+import Dany from '../assets/Dany.png';
 
 import BarChartOutlinedIcon from '@mui/icons-material/BarChartOutlined';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
@@ -45,7 +46,7 @@ const Sidebar = () => {
     <Box
       sx={{
         '& .pro-sidebar-inner': {
-          background: `${colors.primary[400]} !important`,
+          background: `${colors.primary[700]} !important`,
         },
         '& .pro-icon-wrapper': {
           backgroundColor: 'transparent !important',
@@ -54,10 +55,10 @@ const Sidebar = () => {
           padding: '5px 35px 5px 20px !important',
         },
         '& .pro-inner-item:hover': {
-          color: `${colors.primary[300]} !important`,
+          color: `${colors.primary[400]} !important`,
         },
         '& .pro-menu-item.active': {
-          color: `${colors.primary[500]} !important`,
+          color: `${colors.blueAccent[500]} !important`,
         },
       }}
     >
@@ -69,7 +70,7 @@ const Sidebar = () => {
             icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
             style={{
               margin: '10px 0 20px 0',
-              color: colors.grey[100],
+              color: colors.white[100],
             }}
           >
             {!isCollapsed && (
@@ -96,7 +97,7 @@ const Sidebar = () => {
                   alt="profile-user"
                   width="100px"
                   height="100px"
-                  src={`../assets/Dany.png`}
+                  src={Dany}
                   style={{ cursor: 'pointer', borderRadius: '50%' }}
                 />
               </Box>
