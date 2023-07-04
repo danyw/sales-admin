@@ -3,8 +3,9 @@ import { useMode } from './hooks/useMode';
 import { ColorModeContext } from './contexts/ColorModeContext';
 import { Route, Routes } from 'react-router-dom';
 import { CssBaseline, ThemeProvider } from '@mui/material';
-import Sidebar from './views/global/Sidebar';
-import Topbar from "./views/global/Topbar"
+import Sidebar from './components/Sidebar';
+import Topbar from "./components/Topbar";
+import Team from './views/team';
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -21,6 +22,7 @@ function App() {
 
           <Routes>
           {/* <Route path="/" element={<Dashboard />} /> */}
+          <Route path="/team" element={<Team />} />
 
           </Routes>
           

@@ -142,15 +142,15 @@ export const themeSettings = (mode) => {
               light: colors.white[100],
             },
             background: {
-              default: colors.primary[800],
+              default: colors.primary[600],
             },
           }
         : {
             primary: {
-              main: colors.primary[100],
+              main: colors.primary[300],
             },
             secondary: {
-              main: colors.yellowAccent[500],
+              main: colors.yellowAccent[600],
             },
             neutral: {
               dark: colors.white[700],
@@ -158,7 +158,7 @@ export const themeSettings = (mode) => {
               light: colors.white[100],
             },
             background: {
-              default: colors.white[600],
+              default: colors.white[500],
             },
           }),
     },
