@@ -3,10 +3,7 @@
 // #419bf9 - blue
 // #c8cf2d - green
 // #554d56 - teflon
-import { createContext, useState, useMemo } from "react";
-import { createTheme } from "@mui/material/styles";
-// import { themeSettings } from "../config/theme"
-// import { createContext } from "react";
+
 
 export const tokens = (mode) => ({
   ...(mode === 'dark'
@@ -195,25 +192,3 @@ export const themeSettings = (mode) => {
     },
   };
 };
-
-
-
-export const ColorModeContext = createContext({
-    toggleColorMode: () => {},
-});
-
-
-export const useMode = () => {
-    const [mode, setMode] = useState("dark");
-  
-    const colorMode = useMemo(
-      () => ({
-        toggleColorMode: () =>
-          setMode((prev) => (prev === "light" ? "dark" : "light")),
-      }),
-      []
-    );
-  
-    const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
-    return [theme, colorMode];
-  };
