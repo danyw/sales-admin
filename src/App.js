@@ -8,6 +8,7 @@ import Topbar from './components/Topbar';
 import Team from './views/team';
 import Contacts from './views/contacts';
 import Invoices from './views/invoices';
+import ProfileForm from "./views/profileForm";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -27,6 +28,7 @@ function App() {
               <Route path="/team" element={<Team />} />
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/invoices" element={<Invoices />} />
+              <Route path="/profileform" element={<ProfileForm />} />
             </Routes>
           </main>
         </div>
